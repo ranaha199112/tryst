@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from "formik";
+import Image from "next/image";
 import { site } from "../config";
 import useMockLogin from "../hooks/useMockLogin";
+import Captcha from "../public/images/captcha.svg";
 
 function Content() {
   const initialvalues = {
@@ -87,7 +89,9 @@ function Content() {
                         <span className="font-normal">* </span>
                         Please enter the characters shown inside the blue box
                       </label>
-                      <div className="w-[153px] h-[53px] border-2 border-blue-600 mb-1"></div>
+                      <div className="w-[153px] h-[53px] border-2 border-blue-600 mb-1">
+                        <Image src={Captcha} />
+                      </div>
                       <Field
                         className="w-full px-[8px] py-[4px] text-base outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
                         id="characters"
