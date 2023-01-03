@@ -3,6 +3,7 @@ import Image from "next/image";
 import { site } from "../config";
 import useMockLogin from "../hooks/useMockLogin";
 import Captcha from "../public/images/captcha.svg";
+import InputField from "./InputField";
 
 function Content() {
   const initialvalues = {
@@ -48,67 +49,39 @@ function Content() {
             >
               {(formik) => (
                 <Form className="">
-                  <div className="space-y-[60px] text-sm">
-                    <div className="">
-                      <label
-                        htmlFor="email"
-                        className="text-[#5d738d] uppercase font-medium tracking-wide"
-                      >
-                        Email address
-                      </label>
-                      <Field
-                        className="w-full px-[8px] py-[11px] text-xl  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
-                        id="email"
-                        name="email"
-                        required
-                      />
-                    </div>
-
-                    <div className="">
-                      <label
-                        htmlFor="password"
-                        className="text-[#5d738d] uppercase font-medium tracking-wide"
-                      >
-                        Password
-                      </label>
-                      <Field
-                        className="w-full  px-[8px] py-[11px] text-xl  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="on"
-                        required
-                      />
-                    </div>
-
-                    <div className="">
-                      <label
-                        htmlFor="characters"
-                        className="text-[#5d738d] uppercase font-medium tracking-wide"
-                      >
-                        <span className="font-normal">* </span>
-                        Please enter the characters shown inside the blue box
-                      </label>
+                  <div className="space-y-[60px]">
+                    <InputField
+                      label="Email Address"
+                      id="email"
+                      name="email"
+                      type="email"
+                    />
+                    <InputField
+                      label="Password"
+                      id="password"
+                      name="password"
+                      type="password"
+                      autoComplete="on"
+                    />
+                    <InputField
+                      label="* Please enter the characters shown inside the blue box"
+                      id="characters"
+                      name="characters"
+                      type="text"
+                      required
+                    >
                       <div className="w-[153px] h-[53px] border-2 border-blue-600 mb-1">
                         <Image src={Captcha} />
                       </div>
-                      <Field
-                        className="w-full px-[8px] py-[11px] text-xl outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
-                        id="characters"
-                        name="characters"
-                        type="text"
-                        required
-                      />
-
-                      <div className="mt-5 flex items-center gap-1">
-                        <Field type="checkbox" name="remember" id="remember" />
-                        <label
-                          htmlFor="remember"
-                          className="font-bold tracking-wide"
-                        >
-                          Remember me for 14 days
-                        </label>
-                      </div>
+                    </InputField>
+                    <div className="flex items-center gap-1 text-sm">
+                      <Field type="checkbox" name="remember" id="remember" />
+                      <label
+                        htmlFor="remember"
+                        className="font-bold tracking-wide"
+                      >
+                        Remember me for 14 days
+                      </label>
                     </div>
                   </div>
 
