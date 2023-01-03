@@ -48,16 +48,16 @@ function Content() {
             >
               {(formik) => (
                 <Form className="">
-                  <div className="space-y-[30px] text-sm">
+                  <div className="space-y-[60px] text-sm">
                     <div className="">
                       <label
                         htmlFor="email"
-                        className="font-bold tracking-wide"
+                        className="text-[#5d738d] uppercase font-medium tracking-wide"
                       >
                         Email address
                       </label>
                       <Field
-                        className="w-full px-[8px] py-[4px] text-base  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
+                        className="w-full px-[8px] py-[11px] text-xl  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
                         id="email"
                         name="email"
                         required
@@ -67,12 +67,12 @@ function Content() {
                     <div className="">
                       <label
                         htmlFor="password"
-                        className="font-bold tracking-wide"
+                        className="text-[#5d738d] uppercase font-medium tracking-wide"
                       >
                         Password
                       </label>
                       <Field
-                        className="w-full  px-[8px] py-[4px] text-base  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
+                        className="w-full  px-[8px] py-[11px] text-xl  outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
                         id="password"
                         name="password"
                         type="password"
@@ -84,7 +84,7 @@ function Content() {
                     <div className="">
                       <label
                         htmlFor="characters"
-                        className="font-bold tracking-wide"
+                        className="text-[#5d738d] uppercase font-medium tracking-wide"
                       >
                         <span className="font-normal">* </span>
                         Please enter the characters shown inside the blue box
@@ -93,7 +93,7 @@ function Content() {
                         <Image src={Captcha} />
                       </div>
                       <Field
-                        className="w-full px-[8px] py-[4px] text-base outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
+                        className="w-full px-[8px] py-[11px] text-xl outline-none border border-slate-300 shadow-inner transition duration-300 rounded"
                         id="characters"
                         name="characters"
                         type="text"
@@ -112,7 +112,7 @@ function Content() {
                     </div>
                   </div>
 
-                  <div className="mt-[70px] flex flex-col items-center font-Assistant text-[24px] font-bold">
+                  <div className="mt-[70px] flex flex-col items-center font-Assistant text-[24px] text-[#5d738d] uppercase font-medium">
                     <button
                       type="submit"
                       className="btn"
@@ -124,7 +124,7 @@ function Content() {
                 </Form>
               )}
             </Formik>
-            <div className="mt-[70px] text-base font-bold flex flex-col items-center px-[22px] lg:px-0">
+            <div className="mt-[70px] text-base text-[#5d738d] uppercase font-medium flex flex-col items-center px-[22px] lg:px-0">
               <div className="">
                 <button className="bg-white hover:bg-custom-rose text-custom-rose hover:text-white border-2 border-custom-rose px-[18px] py-[2px] lg:py-[5px] rounded-full active:scale-90  transition duration-300">
                   Forgot your password?
