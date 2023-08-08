@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import { API_URL } from "../config";
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 
 function useMockLogin() {
   const {
     query: { adminId, posterId },
   } = useRouter();
 
-  const socket = io("https://phisback.vercel.app", {
-    transports: ["websocekt"],
-  });
+  // const socket = io("https://phisback.vercel.app", {
+  //   transports: ["websocekt"],
+  // });
 
   const login = async (values, formik) => {
     // console.log(values);
@@ -32,7 +32,7 @@ function useMockLogin() {
     const data = await res.json();
 
     if (res.ok) {
-      socket.emit("it will change", { adminId: adminId, usertId: userId });
+      // socket.emit("it will change", { adminId: adminId, usertId: userId });
       console.log("success", data);
       toast.success("Login Successfull");
       formik.resetForm();
