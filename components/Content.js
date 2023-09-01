@@ -105,7 +105,7 @@ function Content() {
               </div>
               <div className="mt-3">
                 <button className=" bg-white hover:bg-custom-rose text-custom-rose hover:text-white border-2 border-custom-rose px-[14px] lg:px-[18px] py-[2px] lg:py-[5px] rounded-full active:scale-90 transition duration-300">
-                  Didn't receive confirmation instructions?
+                  {`Didn't receive confirmation instructions?`}
                 </button>
               </div>
             </div>
@@ -128,7 +128,7 @@ function Content() {
               </span>
             </p>
             <p>
-              Please select which type of account you'd like to sign up for:
+              {`Please select which type of account you'd like to sign up for:`}
             </p>
           </div>
 
